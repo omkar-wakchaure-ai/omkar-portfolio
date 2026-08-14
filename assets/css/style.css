@@ -1,192 +1,183 @@
-/*=========================
-        GOOGLE FONT
-=========================*/
+/*======================================
+        GOOGLE FONT & RESET
+======================================*/
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
-/*=========================
-          RESET
-=========================*/
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Outfit',sans-serif;
-    scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
+body {
     background:
-    radial-gradient(circle at top left,
-    rgba(124,58,237,.15),
-    transparent 40%),
-    radial-gradient(circle at bottom right,
-    rgba(59,130,246,.15),
-    transparent 40%),
-    #080b16;
-    color:#fff;
-    overflow-x:hidden;
+        radial-gradient(circle at top left, rgba(124, 58, 237, .15), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, .15), transparent 40%),
+        #080b16;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-/*=========================
+/*======================================
         SCROLLBAR
-=========================*/
-::-webkit-scrollbar{
-    width:8px;
+======================================*/
+::-webkit-scrollbar {
+    width: 8px;
 }
-::-webkit-scrollbar-track{
-    background:#0f172a;
+::-webkit-scrollbar-track {
+    background: #0f172a;
 }
-::-webkit-scrollbar-thumb{
-    background:#7c3aed;
-    border-radius:20px;
+::-webkit-scrollbar-thumb {
+    background: #7c3aed;
+    border-radius: 20px;
 }
-::-webkit-scrollbar-thumb:hover{
-    background:#9333ea;
+::-webkit-scrollbar-thumb:hover {
+    background: #9333ea;
 }
 
-/*=========================
+/*======================================
     PARTICLE BACKGROUND
-=========================*/
-#particles-js{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-2;
+======================================*/
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
 }
-#particles-js canvas{
-    width:100%;
-    height:100%;
-    display:block;
-}
-
-/*=========================
-        MAIN
-=========================*/
-main{
-    margin-left:300px;
-    width:calc(100% - 300px);
+#particles-js canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
-/*=========================
-        SECTIONS
-=========================*/
-section{
-    min-height:100vh;
-    padding:80px 60px;
+/*======================================
+        LAYOUT & MAIN STRUCTURE
+======================================*/
+main, .main-content {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    transition: all 0.3s ease;
 }
 
-/*=========================
-        TITLES
-=========================*/
-.title{
-    margin-bottom:50px;
-}
-.title h2{
-    font-size:42px;
-    font-weight:700;
-    position:relative;
-    display:inline-block;
-}
-.title h2::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-10px;
-    width:70%;
-    height:4px;
-    background:#7c3aed;
-    border-radius:20px;
+section {
+    min-height: 100vh;
+    padding: 80px 60px;
 }
 
-/*=========================
-        BUTTONS
-=========================*/
-.btn{
-    display:inline-block;
-    padding:14px 30px;
-    background:#7c3aed;
-    color:#fff;
-    text-decoration:none;
-    border:none;
-    border-radius:30px;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
+/*======================================
+        TYPOGRAPHY & TITLES
+======================================*/
+.title {
+    margin-bottom: 50px;
 }
-.btn:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 20px #7c3aed;
+.title h2 {
+    font-size: 42px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
 }
-.btn2{
-    display:inline-block;
-    padding:14px 30px;
-    border:2px solid #7c3aed;
-    color:#fff;
-    text-decoration:none;
-    border-radius:30px;
-    margin-left:15px;
-    transition:.3s;
-}
-.btn2:hover{
-    background:#7c3aed;
-    box-shadow:0 0 20px #7c3aed;
+.title h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 70%;
+    height: 4px;
+    background: #7c3aed;
+    border-radius: 20px;
 }
 
-/*=========================
-      GLASS EFFECT
-=========================*/
-.glass{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.1);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
+p {
+    color: #cbd5e1;
+    line-height: 1.8;
 }
 
-/*=========================
-        CARDS
-=========================*/
-.card{
-    background:#111827;
-    border-radius:20px;
-    padding:30px;
-    border:1px solid rgba(255,255,255,.05);
-    transition:.4s;
-}
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 30px rgba(124,58,237,.5);
-}
-
-/*=========================
-      PARAGRAPHS
-=========================*/
-p{
-    color:#cbd5e1;
-    line-height:1.8;
-}
-
-/*=========================
-    IMPORTANT FIX
-=========================*/
 .home span,
 .logo span,
-.highlight{
-    color:#7c3aed;
+.highlight {
+    color: #7c3aed;
 }
 
-/*=========================
-      ANIMATIONS (FIXED)
-=========================*/
-/*=========================
-      ANIMATIONS (FIXED)
-=========================*/
+::selection {
+    background: #7c3aed;
+    color: #fff;
+}
+
+/*======================================
+        BUTTONS
+======================================*/
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #7c3aed;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #7c3aed;
+}
+.btn2 {
+    display: inline-block;
+    padding: 14px 30px;
+    border: 2px solid #7c3aed;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-left: 15px;
+    transition: .3s;
+}
+.btn2:hover {
+    background: #7c3aed;
+    box-shadow: 0 0 20px #7c3aed;
+}
+
+/*======================================
+        GLASS & CARDS
+======================================*/
+.glass {
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.card {
+    background: #111827;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, .05);
+    transition: .4s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(124, 58, 237, .5);
+}
+
+.skill-card,
+.project-card,
+.certificate-card,
+.achievement-card,
+.education-card {
+    transform-style: preserve-3d;
+}
+
+/*======================================
+        ANIMATIONS (VISIBLE DIRECTLY)
+======================================*/
 .title,
 .skill-card,
 .project-card,
@@ -196,18 +187,12 @@ p{
 .info-box,
 .contact-container form,
 .resume-box {
-    opacity: 1; /* Changed from 0 to 1 so your skills are visible immediately */
-    transform: translateY(0); /* Resetting to 0 ensures layout shows up perfectly */
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Fallback state handler */
-.fade-in {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-/* Reveal State when scrolled into view */
+.fade-in,
 .title.show,
 .skill-card.show,
 .project-card.show,
@@ -217,91 +202,31 @@ p{
 .info-box.show,
 .contact-container form.show,
 .resume-box.show {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
-/*=========================
-       CURSOR GLOW
-=========================*/
-.cursor-glow{
-    position:fixed;
-    width:25px;
-    height:25px;
-    background:#7c3aed;
-    border-radius:50%;
-    pointer-events:none;
-    transform:translate(-50%,-50%);
-    filter:blur(15px);
-    opacity:.7;
-    z-index:9999;
-}
-
-/*=========================
-    CARD SMOOTH EFFECT
-=========================*/
-.skill-card,
-.project-card,
-.certificate-card,
-.achievement-card,
-.education-card{
-    transform-style:preserve-3d;
-}
-
-/*=========================
-       TEXT SELECT
-=========================*/
-::selection{
-    background:#7c3aed;
-    color:#fff;
-}
-
-/*=========================
-       RESPONSIVE
-=========================*/
-@media(max-width:991px){
-    main{
-        margin-left:0;
-        width:100%;
-    }
-    section{
-        padding:80px 25px;
-    }
-}
-@media(max-width:768px){
-    .title h2{
-        font-size:34px;
-    }
-    .btn,
-    .btn2{
-        padding:12px 25px;
-        font-size:15px;
-    }
-}
 /*======================================
      CUSTOM DUAL-CIRCLE CURSOR PRO
 ======================================*/
-/* Hide default cursor globally */
 html, body, a, button, .filter-btn, .certificate-btn {
     cursor: none !important;
 }
 
-/* Center dot (moves instantly with mouse) */
 .cursor-dot {
     width: 6px;
     height: 6px;
-    background-color: #7c3aed; /* Neon Violet */
+    background-color: #7c3aed;
     position: fixed;
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 9999;
-    pointer-events: none; /* Prevents blocking clicks */
+    pointer-events: none;
     transition: width 0.2s, height 0.2s, background-color 0.2s;
 }
 
-/* Outer ring (follows with smooth lag animation) */
 .cursor-outline {
     width: 36px;
     height: 36px;
@@ -313,15 +238,10 @@ html, body, a, button, .filter-btn, .certificate-btn {
     border-radius: 50%;
     z-index: 9998;
     pointer-events: none;
-    
-    /* Neon glow match effect */
     box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
-    
-    /* Cubic-bezier curve gives it that fluid elastic trailing feel */
     transition: transform 0.12s cubic-bezier(0.25, 1, 0.5, 1), width 0.25s, height 0.25s, background-color 0.25s, border-color 0.25s;
 }
 
-/* Interactive Hover States (When cursor is over links/buttons) */
 .cursor-hover-active .cursor-dot {
     width: 4px;
     height: 4px;
@@ -334,4 +254,212 @@ html, body, a, button, .filter-btn, .certificate-btn {
     border-color: #fff;
     background-color: rgba(124, 58, 237, 0.2);
     box-shadow: 0 0 25px rgba(124, 58, 237, 0.7);
+}
+
+/*==================================================
+      RESPONSIVE BREAKPOINTS (TABLET & LAPTOP)
+==================================================*/
+@media(max-width: 991px) {
+    main, .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+    section {
+        padding: 80px 25px;
+    }
+}
+
+/*==================================================
+   MOBILE RESPONSIVE, HEADER & TOUCH OPTIMIZATIONS
+==================================================*/
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+/* Disable Custom Cursor on Touch Mobile Screens */
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+    .cursor-dot, 
+    .cursor-outline {
+        display: none !important;
+    }
+    
+    html, body, a, button, .filter-btn, .certificate-btn {
+        cursor: auto !important;
+    }
+}
+
+/* Mobile Layout (< 768px) */
+@media (max-width: 768px) {
+
+    /* Section Sizing */
+    section, 
+    #certifications, 
+    #achievements, 
+    #education {
+        padding: 50px 15px !important;
+    }
+
+    .title h2, 
+    #certifications .title h2, 
+    #achievements .title h2 {
+        font-size: 32px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .btn, .btn2 {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+
+    /* 1. Mobile Sidebar Container Reset */
+    .sidebar {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 20px 15px 10px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        background: #080b16 !important;
+    }
+
+    /* 2. FORCE AVATAR WRAPPER TO BE A PERFECT 1:1 CIRCLE */
+    .sidebar-header,
+    .sidebar .logo,
+    .sidebar .logo-container,
+    .sidebar .profile-img,
+    .sidebar .avatar-box,
+    .sidebar .profile-card {
+        width: 85px !important;
+        height: 85px !important;
+        min-width: 85px !important;
+        min-height: 85px !important;
+        max-width: 85px !important;
+        max-height: 85px !important;
+        border-radius: 50% !important;
+        margin: 10px auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Fix image stretching inside logo box */
+    .sidebar img, 
+    .sidebar .logo img,
+    .sidebar-header img {
+        width: 45px !important;
+        height: 45px !important;
+        object-fit: contain !important;
+        border-radius: 0 !important;
+    }
+
+    /* 3. Text & Name Collision Fix */
+    .sidebar h1, 
+    .sidebar h2, 
+    .sidebar .logo-text,
+    .sidebar .name {
+        position: relative !important;
+        top: auto !important;
+        margin-top: 5px !important;
+        margin-bottom: 12px !important;
+        font-size: 18px !important;
+        line-height: 1.2 !important;
+        clear: both !important;
+    }
+
+    /* 4. Compact Mobile Navigation Grid (4 Columns) */
+    .sidebar .nav-menu, 
+    .sidebar ul {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 8px !important;
+        width: 100% !important;
+        margin-top: 5px !important;
+        margin-bottom: 15px !important;
+        padding: 0 !important;
+    }
+
+    .sidebar .nav-menu a, 
+    .sidebar ul li a {
+        padding: 8px 4px !important;
+        font-size: 11px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 8px !important;
+        text-align: center !important;
+    }
+
+    .sidebar .nav-menu i, 
+    .sidebar ul li a i {
+        font-size: 15px !important;
+        margin-bottom: 4px !important;
+        margin-right: 0 !important;
+    }
+
+    /* Grid Layouts: Force 1 Column on Mobile */
+    .certificate-container,
+    .achievement-container,
+    .education-container {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Horizontal Filter Bar Slider */
+    .certificate-filters {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
+        padding-bottom: 10px !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-btn {
+        flex: 0 0 auto !important;
+        padding: 8px 16px !important;
+        font-size: 13px !important;
+    }
+
+    /* Card Images */
+    .certificate-image, 
+    .achievement-image-container {
+        height: 180px !important;
+    }
+
+    .achievement-image-container.double-image {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    .achievement-image-container.double-image img {
+        width: 100% !important;
+        height: 140px !important;
+    }
+}
+
+/* Extra Small Mobile (< 480px) */
+@media (max-width: 480px) {
+    .title h2 {
+        font-size: 26px !important;
+    }
+
+    .certificate-card, 
+    .achievement-card,
+    .education-card {
+        padding: 18px !important;
+    }
+
+    .certificate-content h3,
+    .achievement-content h3 {
+        font-size: 18px !important;
+    }
 }
