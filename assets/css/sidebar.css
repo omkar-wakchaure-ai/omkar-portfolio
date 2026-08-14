@@ -1,0 +1,235 @@
+/*=========================
+        SIDEBAR
+=========================*/
+/*=========================
+        SIDEBAR
+=========================*/
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+
+    width:300px;
+    height:100vh;
+
+    background:rgba(15,23,42,.88);
+    backdrop-filter:blur(15px);
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+    flex-direction:column;
+    /* CHANGE THIS FROM space-between TO flex-start */
+    justify-content: flex-start; 
+    align-items:center;
+
+    padding:30px 20px;
+
+    z-index:1000;
+
+    /* ADD THESE TWO LINES TO ENABLE SMOOTH SCROLLING */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/*=========================
+        PROFILE
+=========================*/
+.profile{
+    text-align:center;
+    width:100%;
+}
+.profile::before{
+    content:"PORTFOLIO";
+    display:block;
+    margin-bottom:15px;
+    color:#7c3aed;
+    font-size:13px;
+    letter-spacing:6px;
+    font-weight:600;
+}
+
+/*=========================
+       IMAGE CONTAINER
+=========================*/
+
+.image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+    
+    /* Native CSS Floating Effect added here */
+    animation: sidebarFloat 4s ease-in-out infinite;
+}
+
+/* Smooth keyframes for the floating animation */
+@keyframes sidebarFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/*=========================
+      PROFILE CIRCLE
+=========================*/
+.profile-circle{
+    position:relative;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    overflow:hidden;
+    border:5px solid #7c3aed;
+    box-shadow:
+        0 0 25px #7c3aed,
+        0 0 60px rgba(124,58,237,.45);
+    transition:.5s;
+}
+.profile-circle:hover{
+    transform:scale(1.05);
+    box-shadow:
+        0 0 35px #7c3aed,
+        0 0 80px rgba(124,58,237,.6);
+}
+
+/*=========================
+      PROFILE IMAGE
+=========================*/
+.profile-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transform:scale(1.15);
+    transition:.5s;
+}
+.profile-circle:hover .profile-img{
+    transform:scale(1.22);
+}
+
+/*=========================
+    TECH LOGO (FIXED)
+=========================*/
+.tech-logo{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    pointer-events:none;
+}
+.tech-logo img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    opacity:.18;
+    filter:drop-shadow(0 0 25px #7c3aed);
+    animation:pulse 2s infinite ease-in-out;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out; 
+}
+.tech-logo img.blink {
+    opacity: 0;
+    transform: scale(0.7) rotate(-8deg);
+}
+
+/*=========================
+        NAME
+=========================*/
+.profile h2{
+    margin-top:22px;
+    font-size:32px;
+    font-weight:700;
+    color:#fff;
+}
+.profile p{
+    margin-top:8px;
+    font-size:17px;
+    color:#94a3b8;
+}
+
+/*=========================
+        NAVIGATION
+=========================*/
+nav{
+    width:100%;
+}
+nav ul{
+    list-style:none;
+}
+nav ul li{
+    margin:12px 0;
+}
+nav ul li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 20px;
+    text-decoration:none;
+    color:#fff;
+    font-size:17px;
+    font-weight:500;
+    border-radius:12px;
+    transition:.35s;
+}
+nav ul li a i{
+    width:24px;
+    text-align:center;
+    font-size:18px;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    background:#7c3aed;
+    transform:translateX(8px);
+    box-shadow:0 0 20px rgba(124,58,237,.5);
+}
+
+/*=========================
+        SOCIAL
+=========================*/
+
+
+.social{
+    display:flex;
+    gap:15px;
+    /* ADD THIS LINE to push the social icons down below the menu */
+    margin-top: auto; 
+    padding-top: 20px;
+}
+.social a{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    text-decoration:none;
+    color:#fff;
+    background:#111827;
+    transition:.4s;
+    font-size:20px;
+}
+.social a:hover{
+    background:#7c3aed;
+    transform:translateY(-6px);
+    box-shadow:
+        0 0 20px #7c3aed,
+        0 0 45px rgba(124,58,237,.5);
+}
+
+/*=========================
+      LOGO PULSE
+=========================*/
+@keyframes pulse{
+    0%{ transform:scale(.9); }
+    50%{ transform:scale(1.05); }
+    100%{ transform:scale(.9); }
+}
+
+.sidebar::after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:2px;
+    height:100%;
+    background:linear-gradient(transparent, #7c3aed, transparent);
+}

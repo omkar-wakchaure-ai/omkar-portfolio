@@ -1,0 +1,197 @@
+/*=========================
+      LARGE TABLETS
+=========================*/
+@media(max-width:1200px){
+    .sidebar{
+        width:260px;
+    }
+    main{
+        margin-left:260px;
+        padding:40px;
+    }
+    .home-content h1{
+        font-size:55px;
+    }
+}
+
+/*=========================
+        TABLETS
+=========================*/
+@media(max-width:992px){
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+        padding:20px;
+    }
+    .profile{
+        margin-bottom:20px;
+    }
+    nav ul{
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+    nav ul li{
+        margin:0;
+    }
+    nav ul li a{
+        padding:10px 15px;
+    }
+    .social{
+        margin-top:20px;
+    }
+    main{
+        margin-left:0;
+        padding:30px;
+    }
+    .home{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+    .home-content{
+        margin-top:30px;
+    }
+    .home-content p{
+        margin:auto;
+        margin-bottom:30px;
+    }
+    .stats{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+    .buttons{
+        justify-content:center;
+    }
+}
+
+/*=========================
+        MOBILE
+=========================*/
+@media(max-width:768px){
+    body{
+        overflow-x:hidden;
+    }
+    main{
+        padding:20px;
+    }
+    .home-content h1{
+        font-size:42px;
+    }
+    .home-content h2{
+        font-size:26px;
+    }
+    .home-image img{
+        width:280px;
+        height:280px;
+    }
+    .title h2{
+        font-size:36px !important;
+    }
+    .skill-container,
+    .project-container,
+    .certificate-container,
+    .achievement-container,
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+    .stats{
+        gap:15px;
+    }
+    .stats div{
+        width:130px;
+    }
+    .buttons{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+    .btn,
+    .btn2{
+        width:100%;
+        text-align:center;
+    }
+    .education-container::before{
+        left:20px;
+    }
+    .timeline-item{
+        width:100%;
+        left:0 !important;
+        padding-left:60px;
+        padding-right:20px;
+        text-align:left !important;
+        margin-bottom:30px;
+    }
+    .timeline-item::before{
+        left:10px !important;
+    }
+}
+
+/*=========================
+       SMALL MOBILE
+=========================*/
+@media(max-width:576px){
+    .sidebar{
+        padding:15px;
+    }
+    .profile .image{
+        width:130px;
+        height:130px;
+    }
+    .profile h2{
+        font-size:24px;
+    }
+    .profile p{
+        font-size:14px;
+    }
+    nav ul{
+        gap:5px;
+    }
+    nav ul li a{
+        font-size:14px;
+        padding:8px 12px;
+    }
+    .home-content h1{
+        font-size:34px;
+    }
+    .home-content h2{
+        font-size:22px;
+    }
+    .home-content p{
+        font-size:15px;
+    }
+    .home-image img{
+        width:220px;
+        height:220px;
+    }
+    .stats div{
+        width:100%;
+    }
+    .project-buttons{
+        flex-direction:column;
+    }
+    .contact-container form{
+        padding:20px;
+    }
+    .info-box{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+/*=========================
+    EXTRA SMALL DEVICES
+=========================*/
+@media(max-width:400px){
+    .home-content h1{
+        font-size:28px;
+    }
+    .title h2{
+        font-size:30px !important;
+    }
+    .home-image img{
+        width:180px;
+        height:180px;
+    }
+}

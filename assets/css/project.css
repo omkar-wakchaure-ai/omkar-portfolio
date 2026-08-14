@@ -1,0 +1,135 @@
+/*=========================
+        PROJECTS
+=========================*/
+#projects{
+    padding-top:100px;
+    position:relative;
+}
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+    margin-top:50px;
+}
+
+/*=========================
+      PROJECT CARD
+=========================*/
+.project-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.5s;
+    backdrop-filter:blur(10px);
+    position:relative;
+}
+.project-card:hover{
+    box-shadow:0 0 35px rgba(124,58,237,.4);
+}
+.project-image{
+    overflow:hidden;
+    height:220px;
+}
+.project-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+.project-card:hover .project-image img{
+    transform:scale(1.1);
+}
+.project-content{
+    padding:25px;
+}
+.project-content h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+.project-content p{
+    margin-bottom:20px;
+    font-size:15px;
+}
+
+/*=========================
+      TECHNOLOGY TAGS
+=========================*/
+.tech-stack{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+.tech-stack span{
+    padding:8px 15px;
+    background:#111827;
+    border-radius:30px;
+    color:#fff;
+    font-size:13px;
+    transition:.4s;
+}
+.tech-stack span:hover{
+    background:#7c3aed;
+}
+
+/*=========================
+        BUTTONS
+=========================*/
+.project-buttons{
+    display:flex;
+    gap:15px;
+}
+.project-buttons a{
+    flex:1;
+    text-align:center;
+    padding:12px;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.4s;
+    font-weight:600;
+}
+.live-btn{
+    background:#7c3aed;
+    color:#fff;
+}
+.code-btn{
+    border:2px solid #7c3aed;
+    color:#fff;
+}
+.live-btn:hover{
+    box-shadow:0 0 20px #7c3aed;
+}
+.code-btn:hover{
+    background:#7c3aed;
+}
+
+/*=========================
+       OVERLAY EFFECT
+=========================*/
+.project-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg, transparent, rgba(255,255,255,.08), transparent);
+    transition:.7s;
+}
+.project-card:hover::before{
+    left:100%;
+}
+#projects::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#7c3aed;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:.15;
+    right:-100px;
+    top:100px;
+    z-index:-1;
+}

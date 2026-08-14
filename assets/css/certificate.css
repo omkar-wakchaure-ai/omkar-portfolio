@@ -1,0 +1,160 @@
+/*=========================
+       CERTIFICATIONS
+=========================*/
+#certifications {
+    padding-top: 100px;
+    position:relative;
+}
+
+#certifications .title {
+    text-align:center;
+}
+
+#certifications .title h2 {
+    font-size:50px;
+}
+
+/*=========================
+     FILTER BUTTONS BAR
+=========================*/
+.certificate-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #7c3aed;
+    color: #fff;
+    border-color: #7c3aed;
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+}
+
+/*=========================
+    CERTIFICATE GRID MAP
+=========================*/
+.certificate-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    margin-top: 40px;
+}
+
+/* Base Card State with Filter Transitions */
+.certificate-card {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    position: relative;
+    
+    /* Smooth scaling effect during filtering transitions */
+    transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Filter hide command state */
+.certificate-card.hide-card {
+    display: none;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 35px rgba(124, 58, 237, .5);
+}
+
+.certificate-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.08);
+}
+
+.certificate-content {
+    padding: 25px;
+}
+
+.certificate-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.certificate-content p {
+    margin-bottom: 20px;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.issuer {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(124, 58, 237, 0.15);
+    border: 1px solid #7c3aed;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.certificate-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #7c3aed;
+    border-radius: 30px;
+    transition: .4s;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.certificate-btn:hover {
+    background: #7c3aed;
+    box-shadow: 0 0 20px #7c3aed;
+}
+
+/* Card Glow Accent background */
+#certifications::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #7c3aed;
+    border-radius: 50%;
+    filter: blur(180px);
+    opacity: .12;
+    right: -100px;
+    bottom: 50px;
+    z-index: -1;
+}
